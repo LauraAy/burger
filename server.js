@@ -12,4 +12,4 @@ app.set('view engine', '.hbs')
 
 app.use(require('./controllers'))
 
-app.listen(3000)
+app.listen(process.envPORT || 3000)
