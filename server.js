@@ -1,4 +1,4 @@
-consconst express = require('express')
+const express = require('express')
 const { join } = require('path')
 const app = express()
 
@@ -10,6 +10,6 @@ app.engine('hbs', require('express-handlebars')({ extname: '.hbs' }))
 app.use(express.static(join(__dirname, 'public')))
 app.set('view engine', '.hbs')
 
-app.use(require('./controllers'))
+// app.use(require('./routes'))
 
 app.listen(process.envPORT || 3000)
